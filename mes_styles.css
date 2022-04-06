@@ -1,0 +1,13 @@
+/* 
+    LA SYNTAXe DU CSS
+    selection {
+        propriete : valeur;
+        propriete : valeur;
+    }
+
+    exemple de selection, les paragraphes p
+*/
+p {
+  color : rgb(96, 190, 228);
+  background: rgb(221, 218, 218);
+}
