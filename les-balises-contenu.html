@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Les balises HTML de contenu</title>
+    <!-- chargement des fichiers CSS -->
+    <link rel="stylesheet" href="mes_styles.css">
+
+</head>
+
+<body>
+    <!-- LES TITRES sur 6 niveaux <h*> ie <h1>, <h2>,... -->
+    <!-- LES PARAGRAPHES px -->
+    <!-- LES LISTES  
+                ** ordonnées: <ol></ol> (ordered list)
+                ** non ordonnées: <ul></ul> (unordered list) -> plus courant
+                ** item d'une liste: <li></li>
+        -->
+    <!-- LES LIENS: <a href="url">texte du lien (intitulé)</a> -->
+    <!-- LES IMAGES <img src="url (http://...) ou chemin relatif à l'url en cours (/xxx/)"> -->
+
+    <!-- 
+        Les balises peuvent ou non inidiquer un "sens" au contenu
+        i ne procure aucune sémantique, le contenu est affiché en italique
+        b ne procure aucune sémantique, le contenu est affiché en gras
+        
+        em (emphasis) procure un sens au contenu, le contenu est affiché en italique
+        strong procure un sens au contenu, le contenu est affiché en gras
+        -> les moteurs de recherche en tiennent compte
+        -->
+
+        <!--exemple de style css inline
+        style="propriété: valeur;propriété: valeur;"-->
+    <h1 style="background-color: beige; color: orange;font-size: 44px;">Les balises de contenu</h1>
+    <p><i> Les balise de </i> contenu sont utilisées pour afficher du <strong> à l'utilisateur</strong></p>
+    
+
+    <ol>
+        <li>item1</li>
+        <li>item2</li>
+    </ol>
+
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+    </ul>
+
+    <!-- target _blank permet d'ouvrir un nouvel onglet plutot que de changer la page en cours -->
+    <a target="_blank" href="https://mabanque.bnpparibas/">Aller vers bnp</a>
+    <br><!--au lieu de br, dans la vraie vie on utiliserait un css-->
+    <!-- lien relatif -->
+    <img src="images/balise-img.jpg" alt="exemple image">
+
+    <!-- LES FORMULAIRES
+            Pour afficher des champs de saisie ou de choix
+
+            Input (champ de saisie simple)
+            TestArea (champ de saisie multi-ligne)
+            select
+        -->
+    <br>
+    <!-- on peut définir la méthode. Par défaut c'est du GET
+        action est l'url où on envoie les données du formulaire
+
+        NOTE IMPORTANTE sur form et input:
+             on n'est pas oblig& de mettre les input dans un form. On peut alors les utiliser dans les js. Dans le cas où on n'a pas besoin de faire un GET/POST vers le serveurs
+            mais juste lancer des actions js coté front dépendant de la saisie. Exemple, trié une liste.
+    -->
+    <form method="POST" action="http://google.com">
+        <input placeholder="votre prenom" type="text">
+        <br><!--au lieu de br, dans la vraie vie on utiliserait un css-->
+
+        <!-- c'est mieux de faire comme ca de ce que dit le prof. Dans place holder on met un exemple-->
+        <label>Renseignez votre prénom</label>
+        <input placeholder="frederic" type="text">
+        <br><!--au lieu de br, dans la vraie vie on utiliserait un css-->
+        <label>Renseigner votre date de naissance</label>
+        <input type="date">
+        <br><!--au lieu de br, dans la vraie vie on utiliserait un css-->
+        <input type="text">
+        <br><!--au lieu de br, dans la vraie vie on utiliserait un css-->
+        <input type="email">
+        <br><!--au lieu de br, dans la vraie vie on utiliserait un css-->
+        <label>Renseigner vos années d'experiences</label>
+        <input type="number">
+
+
+    </form>
+
+    <hr> <!-- crée un break avec une ligne de séparation  -->
+    <button>Clickez ici</button>
+
+    <!-- table pour créer des tableaux     -->
+    <table>
+        <!-- entete du tableau -->
+        <thead>
+            <tr>
+                <td>Date</td>
+                <td>Montant(€)</td>
+            </tr>
+        </thead>
+        <!-- corps du tableau -->
+        <tbody>
+            <tr>
+                <td>17/03/2022</td>
+                <td>25,00</td>
+            </tr>
+            <tr>
+                <td>18/03/2022</td>
+                <td>200,20</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
