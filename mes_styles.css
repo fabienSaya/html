@@ -6,8 +6,43 @@
     }
 
     exemple de selection, les paragraphes p
+body p = paragraphe dans body
+p = paragraphe
+
+** Les regles de priorité CSS (du moins prioritaire au plus prioritaires)
+1- l'ordre de déclaration : la derniere déclaration prend la priorité
+2- La précision de la selection : si une selection est plus precise, c'est ce style qui est appliqué en priorité
+3- le style inline (appliqué directement sur une balise HTML ) <h1 style="color: orange"></h1> prioritaire.
+4- le mot !important apres un propriete:valeur, c'est ce style qui est appliqué en priorité (p { color: blue !important})
+
 */
-p {
-  color : rgb(96, 190, 228);
-  background: rgb(221, 218, 218);
+
+/*
+je fixe un style GLOBAL au texte
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
 }
+
+/*
+    si je veux que ce soit tout ce qui a la class important, dans ce cas au lieu de mettre
+    body p.important
+    je met
+    .important
+*/
+body p.important {
+    color : rgb(37, 170, 223);
+    background: rgb(221, 218, 218);
+
+    /* on stylise le texte */    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* c'est dans l'ordre, si jamais il trouve pas la 1ere font, il met la suivante*/
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+h1 {
+    color: blue !important
+}
+
