@@ -22,7 +22,7 @@ je fixe un style GLOBAL au texte
 */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 12px;    
     font-weight: normal;
 }
 
@@ -32,17 +32,18 @@ body {
     je met
     .important
 */
-body p.important {
+.important {
     color : rgb(37, 170, 223);
     background: rgb(221, 218, 218);
 
-    /* on stylise le texte */    
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* c'est dans l'ordre, si jamais il trouve pas la 1ere font, il met la suivante*/
+    /* on stylise le texte ici, j'applique les fonts open sans que j'ai chargé dans mon html*/    
+    font-family: 'Open Sans', sans-serif; /* c'est dans l'ordre, si jamais il trouve pas la 1ere font, il met la suivante*/
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
   }
 
 h1 {
-    color: blue !important
+    color: blue !important;
+    font-size: 5em;
 }
 
