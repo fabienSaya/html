@@ -47,3 +47,32 @@ h1 {
     font-size: 5em;
 }
 
+/*le div est une boite*/
+div {
+    width: 300px;
+    height: 200px;/* ici la hauteur c'est celle du div auquel il faut ajouter 2xpadding + 2*border*/
+    padding: 30px;
+    border: 2px solid blue;
+    margin: 50px;
+    background: gray;
+}
+
+div.boite {
+    box-sizing: border-box; 
+    /*
+        avec border box, la hauteur et largeur que l'on fixe va prendre en compte :
+            - le contenu de la boite
+            - les paddings (marge interieur
+            - le border
+            mais pas le margin (qui est l'exterieur de la boite).
+        comme ca on sait que la div fera bien 200px de hauteur tout compris
+
+        */    
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+    border: 2px solid blue;
+    margin: 50px;
+    background: gray;
+}
+
